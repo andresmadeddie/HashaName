@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://www.bootstrapcdn.com/bootswatch/ -->
+        <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/slate/bootstrap.min.css" rel="stylesheet">
+
+        <!-- https://favicon.io/emoji-favicons/locked/ -->
+        <link href="/static/favicon.ico" rel="icon">
+
+        <link href="/static/styles.css" rel="stylesheet">
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+        <title>HASHaName Security: Index</title>
+
+        <link href='https://fonts.googleapis.com/css?family=Aguafina Script' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Alex Brush' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Akronim' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Smokum' rel='stylesheet'>
+        <style>
+            body
+            {
+                background-image: url("http://getwallpapers.com/wallpaper/full/4/c/9/14773.jpg");
+                background-color: #cccccc;
+                background-size: contain;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        {% if get_flashed_messages() %}
+            <header>
+                <div class="alert alert-primary border text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+        {% endif %}
+
+        <main>
+            <div style="margin-top:5%; font-size:1000%; text-shadow: 3px 3px 1px gray;">
+                <span style="color:orange; font-family:'Aguafina Script';">H</span><span style="color:orange; font-family:'Akronim';">A</span><span style="color:orange; font-family:'Akronim';">S</span><span style="color:orange; font-family:'Aguafina Script';">H</span>
+                <span style="color:orange; font-size:70%; font-family:'Alex Brush';">a</span>
+                <span style="color:orange; font-size:80%; font-family:'Aguafina Script';">Name</span>
+            </div>
+
+            <div id="container" style="margin-bottom:15%;">
+                <form action="/" method="post">
+                    <button style="margin-right:50px;" id="caja" type="submit" class="button" name="login" value="login">Log In</button>
+                    <button style="margin-right:50px;" id="caja" type="submit" class="button" name="guest" value="guest">Guest Mode</button>
+                    <button id="caja" type="submit" class="button" name="register" value="register">Register</button>
+                </form>
+            </div>
+        </main>
+
+        <footer class="small text-center text-muted">
+            <p style="color:white">Developed by Andrés García</p>
+        </footer>
+
+    </body>

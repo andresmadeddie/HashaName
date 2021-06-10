@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    user
+{% endblock %}
+
+{% block main %}
+
+    <form action="/user" method="post">
+
+        <div class="downspace">
+            <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" style="text-align:center" id="word" name="keyword" placeholder="Insert Keyword" type="text" title="Insert ONLY Alphabet Characters" pattern="[A-Za-z]{1,}">
+            </div>
+            <button type="submit" class="btn btn-primary" id="submit" disabled>Get Password</button>
+            <button type="submit" class="btn btn-secondary" name ="change" value="change">Change PAK</button>
+        </div>
+
+        <div class="downspace">
+            <h4 style="color:green">Password:</h4>
+            <input style="text-align:center; font-size:100%; color:green; background-color: transparent;" type="text"value="{{ password }}" readonly>
+        </div>
+
+        <div class="downspace">
+            <button type="submit" style="margin-right:30px"class="btn btn-outline-info" id="savekeys" disabled>Save Current PAK</button>
+            <input class="form-control" name="save" id="save" placeholder="Key's name" type="text">
+        </div>
+
+        <table class="table">
+            <h4>Stored PAKs</h4>
+            <tr>
+                <th colspan="2"><input type="submit" class="btn btn-outline-danger" name ="deleteall" value="Delete All"></th>
+                <th>Name</th>
+                <th>Date/Time</th>
+            </tr>
+
+            {% for row in idkeyname %}
+                <tr>
+                    <!--Select and Delete by the id-->
+                    <td><button type="submit" class="btn btn-outline-danger" name ="delete" value="{{ row["id"] }}"> Delete</button></td>
+                    <td><button type="submit" class="btn btn-outline-info" name ="select" value="{{ row["id"] }}"> Recover</button></td>
+                    <td style="font-size:150%">{{ row["keyname"] }}</td>
+                    <td> {{ row["datetime"] }}</td>
+                </tr>
+            {% endfor %}
+
+        </table>
+
+    </form>
+    <script>
+        document.querySelector('#word').onkeyup = function() {
+            if (document.querySelector('#word').value === '') {
+                document.querySelector('#submit').disabled = true;
+            } else {
+                document.querySelector('#submit').disabled = false;
+            }
+        }
+                document.querySelector('#save').onkeyup = function() {
+            if (document.querySelector('#save').value === '') {
+                document.querySelector('#savekeys').disabled = true;
+            } else {
+                document.querySelector('#savekeys').disabled = false;
+            }
+        }
+    </script>
+
+
+
+{% endblock %}

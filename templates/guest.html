@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    guest
+{% endblock %}
+
+{% block main %}
+
+    <form action="/guest" method="post">
+
+    <div class="downspace">
+        <div class="form-group">
+            <input autocomplete="off" autofocus class="form-control" style="text-align:center;" id="word" name="keyword" placeholder="Insert Keyword" type="text" title="Insert ONLY Alphabet Characters" pattern="[A-Za-z]{1,}">
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit" disabled>Get Password</button>
+        <button type="submit" class="btn btn-primary" name ="change" value="change">Change PAK</button>
+    </div>
+    <div>
+        <h4 class="form-group" style="color:green">Password: </h4>
+        <input style="text-align:center; color:green; font-size:100%; font-weight: bold; background-color: transparent;" type="text"value="{{ password }}" readonly>
+    </div>
+
+    <script>
+        document.querySelector('#word').onkeyup = function() {
+            if (document.querySelector('#word').value === '') {
+                document.querySelector('#submit').disabled = true;
+            } else {
+                document.querySelector('#submit').disabled = false;
+            }
+        }
+    </script>
+
+{% endblock %}

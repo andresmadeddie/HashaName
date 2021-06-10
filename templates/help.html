@@ -1,0 +1,155 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    help
+{% endblock %}
+
+{% block main %}
+
+    <div style="color:white">
+        <h1>Hash a Name</h1>
+        <h5>"Change your password, NOT your keyword"</h5>
+    </div>
+
+    <div style="text-align:left; text-shadow: 2px 2px black; font-variant:small-caps;">
+        <hr>
+            <p>HashaName is an alternative to <b style="color:white">generate strong passwords</b> from an easy-to-remember keyword(like <b style="color:white">your name)</b>.</p>
+
+            <p>The motto is: "Change your password, NOT your keyword".</p>
+
+            <p>If you want a new strong password, just use the same keyword(like your name), but change automatically and randomly the values of the algorithm.</p>
+
+            <p>As a registered user, you can store the values keys with a customize name. In the future, if you want your password, just select that store key,
+            input your keyboard, and get your password, then copy and paste.<b style="color:white">It's Easy!!!</b></p>
+
+
+        <hr>
+        <h5 style="color:white">THINGS TO KNOW:</h5>
+        <br>
+
+        <h6>What is "<b style="color:white">PAK or PASSWORD'S ALGORITHM KEYS</b>"?</h6>
+        <p>It is a list of randomly selected data use in the algorithm to generate the password</p>
+
+        <h6>What means <b style="color:white">Case Insensitive</b>?</h6>
+        <p>It just means that it doesn't matter if you write with a mix of upper and lower cases (ex:RobeRt, roBERt, robert, ROBERT is the same).
+        So, <b style="color:white">KEEP IT SIMPLE</b>, no need to remember if you input like Robert or robert, for the algorithm is the same.</p>
+
+        <h6>How do I <b style="color:white">CREATE</b> a password?</h6>
+        <ol>
+            <li>Place your keyword (ex:robert) in the Insert Keyword field</li>
+            <li>Push the "Get password" button</li>
+            <li>Your password will appear next "Password:"</li>
+        </ol>
+
+        <h6>How do I <b style="color:white">SEE</b> my password?</h6>
+        <ol>
+            <li>Place your keyword (ex:robert) in the Insert Keyword field</li>
+            <li>Push the "Get password" button</li>
+            <li> Yes, it is exactly as you created the password, just make sure you have not pushed the "Change PAK" button.
+                If you do so without saving, your password will be lost forever and ever.
+                (Only register users can store data, Guest do not have this option...  so, register ;P)</li>
+        </ol>
+
+        <h6>How do I <b style="color:white">SAVE</b> my password?</h6>
+        <p>You don't save your password. Instead, you save the PAK(password's algorithm key) that generates your password with the keyword(maybe your name) that only you know and will always remember<b style="color:white">(KEEP IT SIMPLE)</b>.</p>
+        <ol>
+            <li>Write a name in the "key's PAK" field. (ex: Facebook, Gmail, Pepito, etc)"</li>
+            <li>Press the "Save" button. (Remember the button will not be activated until you input a value in the "key's PAK" field)</li>
+            <li>Look at the Stored PAKs' table. (There appears a new row with your designed name and an option to recover or delete)</li>
+        </ol>
+
+        <h6>How do I <b style="color:white">CHANGE</b> my current password?</h6>
+        <ol>
+            <li>Just push the "Change PAK" button. (remember that the previous PAK(password's algorithm key) will be lost forever unless you have saved it")</li>
+            <li>Use the same keyword as usually(ex:robert)</li>
+            <li>voila!!! new password</li>
+        </ol>
+
+        <h6>How do I <b style="color:white">RECOVER</b> a password from a stored PAK?</h6>
+        <ol>
+            <li>Look in the table the stored PAK you want to recover. you have PAK's names and Date/Time for reference.</li>
+            <li>Push the "Recover" button next to your choice.</li>
+            <li>Input your keyword(ex:robert). Remember: The field is case insensitive.</li>
+            <li>voila!!... the generated password is your password.</li>
+        </ol>
+
+
+        <hr>
+        <h5 style="color:white">REMEMBER:</h5>
+        <h6><b style="color:white">YOU WILL ALWAYS GET THE SAME PASSWORD WITH A KEYWORD UNTIL YOU PRESS THE "CHANGE PAK" BUTTON</b></h6>
+
+        <h6>The generated password always have:</h6>
+        <ul>
+            <li>At least 8 characters long</li>
+            <li>1 uppercase</li>
+            <li>1 lowercase</li>
+            <li>1 number</li>
+            <li>1 symbol</li>
+        </ul>
+
+
+        <h5 style="color:white">DESCRIPTION OF BUTTONS AND INPUTS FIELDS</h5>
+        <h6><b>Intro layout:</b></h6>
+        <ul>Head
+            <ul>
+                <li><b>Help:</b>Leads to the current layout.</li>
+                <li><b>Register:</b>Leads to the register layout.</li>
+                <li><b>Log In:</b>Leads to the Log In layout.</li>
+            </ul>
+        </ul>
+        <ul>Main
+            <ul>
+                <li><b>Log In:.</b>Leads to the Log In layout</li>
+                <li><b>Guest Mode:</b>Leads to the Guest layout.</li>
+                <li><b>Register:</b>Leads to the Register layout.</li>
+            </ul>
+        </ul>
+        <h6><b>Guest Mode:</b></h6>
+        <ul>Head
+            <ul>
+                <li><b>HashaName:</b>when pressed leads you to the intro layout.</li>
+                <li><b>Help:</b>Leads to the current layout.</li>
+            </ul>
+        </ul>
+        <ul>Main
+            <ul>
+                <li><b>Insert Keyword:</b> Insert an easy-to-remember word like your name. Only accepts alphabet characters, and is case insensitive<b style="color:white">(Keep it easy)</b>.</li>
+                <li><b>Get Password:</b> Get a password with the current "password's algorithm key". This button will be activated to push after input some data in the "Insert Keyword" field.</li>
+                <li><b>Change PAK:</b> Push to change the password. This button will change the values of the PAK(password's algorithm key) to provide you a new password.</li>
+                <li><b>Password:</b> This field shows the generated password from where you can Copy&Paste.</li>
+            </ul>
+        </ul>
+
+        <h6><b>User Mode:</b></h6>
+        <ul>Head
+            <ul>
+                <li><b>HashaName:</b>when pressed leads to the Main layout.</li>
+                <li><b>Main:</b> Main layout, where the action occurs.</li>
+                <li><b>Account:</b> option to close your account. This will delete all your store data without the possibility to recover.</li>
+                <li><b>Help:</b> Leads to the current layout.</li>
+                <li><b>log Out:</b> Log out session.</li>
+            </ul>
+        </ul>
+        <ul>Main
+            <ul>
+                <li><b>Insert Keyword:</b> Insert an easy-to-remember word like your name. Only accepts alphabet characters, and is case insensitive<b style="color:white">(Keep it easy)</b>
+                <li><b>Get Password:</b> Get a password with the current "password's algorithm key". This button will be activated to push after input some data in "Insert Keyword"</li>
+                <li><b>Change PAK:</b> Push to change the password. This button will change the values of the PAK(password's algorithm key) to provide you a new password.</li>
+                <li><b>Password:</b> This field shows the generated password from where you can Copy&Paste.</li>
+
+                <li><b>Save Current PAK:</b> Store the current PAK(password's algorithm key). This button will be activated after input some data in the "Key's PAK" field.</li>
+                <li><b>PAK's name:</b> Give a name to the "password's algorithm key". (ex: Facebook, Gmail, Pepito, etc)</li>
+            </ul>
+        </ul>
+        <ul>Stored PAKs Table
+            <ul>
+                <li><b>Delete All:</b> Will delete all stored data.</li>
+                <li><b>Delete</b>: Delete only the PAK(password's algorithm key) in the row.</li>
+                <li><b>Recover:</b> Recover the PAK(password's algorithm key) in the row.</li>
+            </ul>
+        </ul>
+    </div>
+
+{% endblock %}
+
+

@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <form action="/account" method="post">
+        <button class="btn btn-primary" name="close" type="submit">Close Account</button>
+    </form>
+{% endblock %}

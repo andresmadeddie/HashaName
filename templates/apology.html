@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Apology
+{% endblock %}
+
+{% block main %}
+    <!--source of image: https://wallpapercave.com/wp/z5UNyun.png-->
+    <img alt="{{ top }}" class="border" src="http://memegen.link/custom/{{ top | urlencode }}/{{ bottom | urlencode }}.jpg?alt=https://wallpapercave.com/wp/z5UNyun.png" title="{{ top }}">
+{% endblock %}
+
+<!-- https://github.com/jacebrowning/memegen#special-characters -->
+<!-- Quizas explique el porque ",code" al final de la linea 21 de helpers -->
