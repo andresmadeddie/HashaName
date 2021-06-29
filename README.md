@@ -36,7 +36,7 @@ It is a process with several inputs that outputs the password.
 **PAK (Password algorithm key)**
 It is a list of random data use as inputs for the logarithm.
 
-Basically, the logarithm generates a strong password from an easy-to-remember word and the random values from the "PAK".
+Basically, the algorithm generates a strong password from an easy-to-remember word and the random values from the "PAK".
 The password and the keyword are never stored, but the "PAK".
 If the user wants to query his password, he needs the saved "PAK" plus his keyword (stored only in his head).
 If the user wants to change the password or get a new one for another site, he only needs to change the PAK.
