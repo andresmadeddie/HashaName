@@ -3,6 +3,22 @@
 Hash a Name is a web application that explores an alternative way to generate passwords from an easy-to-remember word.
 **motto: "Change your password, NOT your keyword"**
 
+## How to run it
+*command line of Kali Linux (in the hashaname directory)*
+1. export FLASK_APP=application.py
+2. sudo apt install python3-pip
+3. pip3 install cs50
+4. pip3 install Flask-Session
+5. flask run
+6. then copy the IP address and paste it on a browser
+
+*If more instalation is necesary try this:*
+* sudo apt install python
+* sudo apt install virtualenv **OR** sudo apt install python-virtualenv
+* python -m virtualenv hashaname
+* hashaname/bin/activate
+* sudo apt install flask
+then proceed with the steps detailed before
 
 ## Motivation
 The world is full of people looking for distinct solutions. Some people use the same password for everything because
